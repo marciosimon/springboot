@@ -1,4 +1,4 @@
-package br.com.msf.springboot.exception;
+package br.com.msf.springboot.api.infrastructure.config.exceptions;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package br.com.msf.springboot.configs;
+package br.com.msf.springboot.api.infrastructure.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

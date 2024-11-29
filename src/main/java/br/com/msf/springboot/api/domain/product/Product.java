@@ -1,26 +1,21 @@
-package br.com.msf.springboot.models;
+package br.com.msf.springboot.api.domain.product;
 
-import jakarta.persistence.*;
-import org.springframework.hateoas.RepresentationModel;
-
-import java.io.Serial;
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Entity
-@Table(name = "TB_PRODUCTS")
-public class ProductModel extends RepresentationModel<ProductModel> implements Serializable {
-   @Serial
-   private static final long serialVersionUID = 1L;
-   @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
+public class Product {
    private UUID id;
    private String nome;
    private BigDecimal valor;
-   @Column(nullable = false)
    private LocalDateTime registrationDate;
+
+    public Product(UUID id, String nome, BigDecimal valor, LocalDateTime registrationDate) {
+        this.id = id;
+        this.nome = nome;
+        this.valor = valor;
+        this.registrationDate = registrationDate;
+    }
 
     public UUID getId() {
         return id;
